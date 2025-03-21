@@ -1,0 +1,41 @@
+Taoudi Bensouda
+
+Simulateur de gestion du trafic aérien en Python : Développement d'une simulation de contrôle du trafic aérien modélisant le décollage, l'atterrissage et la gestion des conflits entre avions. Implémentation d'une interface graphique pour visualiser les trajectoires et optimiser la gestion des pistes. 
+
+
+
+classe etat avion:(enum) defini états possible d'un avion (en vol...)
+
+Classe avion:
+id; position; destination; etat actuel; fonctions pr changer etat et afficher info
+
+
+
+--------------------------------------------------------------------
+classe piste:
+
+etatpiste = definit etat piste (libre ou occupee)
+
+id; etat; avion en cours; file Fifo; fonction pr avion vers piste et liberation
+
+-------------------------------------------------------------------------------
+classe météo:
+
+typemeteo(enum) = defini types meteo( beau temps; pluie; brouillard...)
+meteo:
+change meteo toutes les X secondes grace a un thread
+affiche meteo actuelle 
+
+-------------------------------------------------------------------------------------------
+classe aeroport:
+historique des atterissage
+compteur nombre total de vol
+système de gestion de pistes et file attente avion
+
+-------------------------------------------------------------------------------------------
+simulation (main.py)
+
+créer un aeroport avc pistes 
+genere des avions et les fait atterir
+met a jour meteo en temps reel
+gere file dattente et les statistiques du trafic aerien
